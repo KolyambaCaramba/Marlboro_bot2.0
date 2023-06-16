@@ -1,0 +1,136 @@
+/* спецификаци */
+body {
+   background:#cab48a;
+   font-family: 'Montserrat', sans-serif;
+   font-family: 'PT Sans', sans-serif;
+}
+.container-futer{
+   background: #222222;
+}
+
+ul, li{
+   display: block;
+   padding: 0;
+   margin: 0;
+}
+
+
+/* первый экран */
+.header{
+   background: rgb(37, 37, 37);
+   color: aliceblue;
+}
+
+
+.container-my{
+   max-width: 1600px;
+   position: relative;
+   margin-left: 50px;
+   margin-right: auto;
+   padding-right: 20px;
+   padding-left: 20px;
+}
+
+.container-my2{
+   max-width: 1650;
+   position: relative;
+   margin-left: 0px;
+   margin-right: 10px;
+   padding-right: 20px;
+   padding-left: 20px;
+}
+.container2{
+   background:rgb(142, 146, 12);
+   max-width: 1097px;
+   position: relative;
+   margin-left: 107px;
+   margin-right: auto;
+   padding-right: 20px;
+   padding-left: 20px;
+}   
+
+.menu__item{
+   margin: 0 20px;
+   padding-top: 7px;
+   
+   
+
+}
+
+.menu__item a {
+   
+   text-decoration: none;
+   font-size: 20px;
+   font-weight: 500;
+   color: white
+}
+
+
+.divmain{
+   background: #222222;
+   color: black;
+}
+
+.menu__item1{
+   margin: 0 20px;
+   padding-top: 7px;
+   color:black 
+}
+
+
+.menu__item1 a {
+   
+   text-decoration: none;
+   font-size: 30px;
+   font-weight: 500;
+   color: rgb(19, 18, 18)
+}
+
+
+h1, h2 {
+   color: black;
+   font-size: 90px
+}
+
+.logo {
+   margin-right: 0%;
+
+}
+
+
+.work-sans {
+   font-family: 'Work Sans', sans-serif;
+}
+       
+#menu-toggle:checked + #menu {
+   display: block;
+}
+
+.hover\:grow {
+   transition: all 0.3s;
+   transform: scale(1);
+}
+
+.hover\:grow:hover {
+   transform: scale(1.02);
+}
+
+.carousel-open:checked + .carousel-item {
+   position: static;
+   opacity: 100;
+}
+
+.carousel-item {
+   -webkit-transition: opacity 0.6s ease-out;
+   transition: opacity 0.6s ease-out;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+   display: block;
+}
+
+
+
+

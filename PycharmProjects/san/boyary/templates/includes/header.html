@@ -1,0 +1,84 @@
+{% load static %}
+
+<header id="header" class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg">
+          <div class="logo">
+            <a  href="{% url 'products:index' %}">
+          <img src="{% static 'img/logo.png' %}" height="60">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg ml-auto">
+          <nav>
+            <ul class="menu d-flex justify-content-centr">
+              <li class="menu__item">
+                <a href="{% url 'about:about' %}"> О кафе</a>
+              </li>
+              <li class="menu__item">
+                <a href="">Как сделать онлайн заказ?</a>
+              </li>
+              <li class="menu__item">
+                <a href="{% url "cart:cart_detail" %}">Корзина</a>
+              </li>
+              <li>
+                <div class="cart">
+                  {% with total_items=cart|length %}
+                      {% if cart|length > 0 %}
+                          
+                          
+                              {{ total_items }} шт. {{ total_items|pluralize }},
+                              {{ cart.get_total_price }} руб.
+                          
+                      {% else %}
+                          корзина пуста.
+                      {% endif %}
+                  {% endwith %}
+              </div>
+            </li> 
+              
+              <button type="button" class="btn btn-secondary mx-2" id="popcart" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" data-content="Vivamus
+              sagittis lacus vel augue laoreet rutrum faucibus.">
+              
+              
+                Cart(<span id="cart">0</span>)
+              </button>
+            </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    
+  
+  </header>
+
+
+
+ {% comment %} <li class="menu__item">
+    <a href="{% url "cart:cart_detail" %}">Корзина</a>
+  </li>
+  <li>
+    <div class="cart">
+      {% with total_items=cart|length %}
+          {% if cart|length > 0 %}
+              
+              
+                  {{ total_items }} шт. {{ total_items|pluralize }},
+                  {{ cart.get_total_price }} руб.
+              
+          {% else %}
+              корзина пуста.
+          {% endif %}
+      {% endwith %}
+  </div>
+</li>  {% endcomment %}
+
+
+{% comment %} <button type="button" class="btn btn-secondary mx-2" id="popcart" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" data-content="Vivamus
+              sagittis lacus vel augue laoreet rutrum faucibus.">
+              
+              
+                Cart(<span id="cart">0</span>)
+              </button> {% endcomment %}
